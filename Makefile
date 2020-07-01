@@ -151,33 +151,33 @@ make_dir:
 
 $(BIN)$(PR_TARGET): $(PR_OBJECTS)
 	cd PNG  && make COMPILER=$(COMPILER)
-	$(CXX) -pthread -o $@ $(PR_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz
+	$(CXX) -pthread -o $@ $(PR_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz $(INCLUDE_DIRS)
 
 $(BIN)$(SR_TARGET): $(SR_OBJECTS)
 	cd PNG  && make COMPILER=$(COMPILER)
-	$(CXX) -pthread -o $@ $(SR_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz
+	$(CXX) -pthread -o $@ $(SR_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz $(INCLUDE_DIRS)
 
 $(BIN)$(PI_TARGET): $(PI_OBJECTS)
 	cd PNG  && make COMPILER=$(COMPILER)
-	$(CXX) -pthread -o $@ $(PI_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz
+	$(CXX) -pthread -o $@ $(PI_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz $(INCLUDE_DIRS)
 
 $(BIN)$(ST_TARGET): $(ST_OBJECTS)
-	$(CXX) -pthread -o $@ $(ST_OBJECTS) $(LFLAGS)
+	$(CXX) -pthread -o $@ $(ST_OBJECTS) $(LFLAGS) $(INCLUDE_DIRS)
 
 $(BIN)$(EH_TARGET): $(EH_OBJECTS)
-	$(CXX) -pthread -o $@ $(EH_OBJECTS) $(LFLAGS)
+	$(CXX) -pthread -o $@ $(EH_OBJECTS) $(LFLAGS) $(INCLUDE_DIRS)
 
 $(BIN)$(IS_TARGET): $(IS_OBJECTS)
 	cd PNG  && make COMPILER=$(COMPILER)
-	$(CXX) -pthread -o $@ $(IS_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz
+	$(CXX) -pthread -o $@ $(IS_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz $(INCLUDE_DIRS)
 
 $(BIN)$(AV_TARGET): $(AV_OBJECTS)
 	cd PNG  && make COMPILER=$(COMPILER)
-	$(CXX) -pthread -o $@ $(AV_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz
+	$(CXX) -pthread -o $@ $(AV_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz $(INCLUDE_DIRS)
 
 $(BIN)$(CP_TARGET): $(CP_OBJECTS)
 	cd PNG  && make COMPILER=$(COMPILER)
-	$(CXX) -pthread -o $@ $(CP_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz
+	$(CXX) -pthread -o $@ $(CP_OBJECTS) -L$(BIN) $(LFLAGS) -ljpeg -lmypng -lz $(INCLUDE_DIRS)
 
 $(BIN)%.o: $(SRC)%.c
 	$(CC) -c -o $@ -I$(INCLUDE) $<
