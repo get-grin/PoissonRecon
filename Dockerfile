@@ -16,8 +16,7 @@ RUN apt-get update && apt-get install -q -y \
     xvfb \
     && rm -rf /var/lib/apt/lists/*
 
-RUN cd PoissonRecon && make all
-ADD . /Poissonrecon
+ADD . /Poissonrecon/
 RUN cd PoissonRecon && make all
 WORKDIR PoissonRecon
 

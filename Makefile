@@ -15,6 +15,8 @@ IS_SOURCE=ImageStitching.cpp
 AV_SOURCE=AdaptiveTreeVisualization.cpp
 CP_SOURCE=ChunkPLY.cpp
 
+INCLUDE_DIRS = -I./Src -I./JPEG
+
 COMPILER ?= gcc
 #COMPILER ?= clang
 
